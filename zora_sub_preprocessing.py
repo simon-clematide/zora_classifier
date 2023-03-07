@@ -55,6 +55,7 @@ with open("data/robin_data.tsv") as f:
         row = line.split("\t")
 
         # Only those with abstracts
+        # TODO: Once buggy rows are fixed, langdetect titles instead of abstracts
         if row[-1] != "" and row[-1] != "\"" and detect(row[-1]) == "en":
             row_id += 1
             row.insert(0, row_id)
@@ -64,4 +65,4 @@ with open("data/robin_data.tsv") as f:
 # print([i for i in buggy_rows])
 # print(len(buggy_rows))
 
-print(len(rows[0]))
+print(len(rows))
