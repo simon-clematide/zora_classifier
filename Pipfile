@@ -1,0 +1,4 @@
+[packages]
+sickle = "*"
+lxml = "*"
+smart-open ="*"
